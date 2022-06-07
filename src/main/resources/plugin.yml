@@ -1,0 +1,4 @@
+name: Chat
+version: '${project.version}'
+author: SalisburyDev
+main: dev.salisbury.chatcore.Chat
