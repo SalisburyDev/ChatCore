@@ -19,6 +19,7 @@ public class ChatCommand {
         "&d/mutechat &7- Mutes the chat",
         "&d/clearchat &7- Clears the chat",
         "&d/broadcast &7- Broadcast message to chat",
+        "&d/ping &7- Get user ping",
         "&7&m-------------------------------------------------"
     );
 
@@ -27,7 +28,7 @@ public class ChatCommand {
         "&7&m-------------------------------------------------",
         "&dAuthor: &7Salisbury",
         "&dVersion: &7" + Chat.getInstance().getDescription().getVersion(),
-        "&dStatus: &cBETA",
+        "&dStatus: &aSTABLE",
         "&7&m-------------------------------------------------"
     );
 

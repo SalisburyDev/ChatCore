@@ -23,10 +23,13 @@ public class Chat extends JavaPlugin {
 
     private void registerPlugins() {
         this.getServer().getPluginManager().registerEvents(new ChatListener(), this);
+        this.getServer().getPluginManager().registerEvents(new JoinListener(), this);
 
         Blade.of().binding(new BukkitBindings()).binding(new DefaultBindings()).containerCreator(BukkitCommandContainer.CREATOR)
                 .fallbackPrefix("chat").tabCompleter(new DefaultTabCompleter()).build()
-                .register(new ChatCommand());
+                .register(new ChatCommand())
+                .register(new BroadcastCommand())
+                .register(new PingCommand());
     }
 
     public static Chat getInstance() {
