@@ -6,6 +6,7 @@ import me.vaperion.blade.Blade;
 import me.vaperion.blade.command.bindings.impl.*;
 import me.vaperion.blade.command.container.impl.*;
 import me.vaperion.blade.completer.impl.*;
+
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Chat extends JavaPlugin {
@@ -14,6 +15,7 @@ public class Chat extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        this.saveDefaultConfig();
         chatMuted = false;
 
         registerPlugins();
@@ -21,7 +23,7 @@ public class Chat extends JavaPlugin {
 
     private void registerPlugins() {
         this.getServer().getPluginManager().registerEvents(new ChatListener(), this);
-        //
+
         Blade.of().binding(new BukkitBindings()).binding(new DefaultBindings()).containerCreator(BukkitCommandContainer.CREATOR)
                 .fallbackPrefix("chat").tabCompleter(new DefaultTabCompleter()).build()
                 .register(new ChatCommand());

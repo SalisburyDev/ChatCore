@@ -2,6 +2,7 @@ package dev.salisbury.chatcore.listeners;
 
 import dev.salisbury.chatcore.Chat;
 import dev.salisbury.chatcore.utils.CC;
+
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
